@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Burn-Fat
+{% endblock %}
+
+{% block main %}
+<form action="{{ url_for('addDetails') }}" method="post">
+
+    <div class="form-group">
+        <input autocomplete="off" autofocus class="form-control" name="steps" placeholder="no. of steps walked" type="text"/>
+    </div>
+    <div class="form-group">
+        <select name="food" class="form-control">
+          <option value="chicken">Tandoori Chicken Breast</option>
+          <option value="naan">Naan Bread</option>
+          <option value="palak paneer">Palak Paneer</option>
+          <option value="daal">Daal Indian Meal</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <input autocomplete="off" autofocus class="form-control" name="jog" placeholder="Km. You Ran Today" type="number"/>
+    </div>
+    <div class="form-group">
+        <input autocomplete="off" autofocus class="form-control" name="weight" placeholder="current Weight if changed" type="number"/>
+    </div>
+    <div class="form-group">
+        <input autocomplete="off" autofocus class="form-control" name="height" placeholder="current Height if changed in inches" type="number"/>
+    </div>
+    <div class="form-group">
+        <input autocomplete="off" autofocus class="form-control" name="sleep" placeholder="Hours of sleep You had" type="text"/>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-default" type="submit">Submit</button>
+    </div>
+
+</form>
+{% endblock %}

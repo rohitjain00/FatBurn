@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Burn-Fat
+{% endblock %}
+
+{% block main %}
+
+<div id="rectangle" style="width:number px; height:number px; background-color:#f8f8f8; border-radius: 5px; ">
+    <h1>Statistics</h1>
+        Your BMI is {{bmi}} {{ bmiStatement }}<br>
+        Your BMR is {{BMR}} <br>
+        Current Weight : {{ currentweight }} Must Have Weight : {{idealWeight}}
+        <br>Age : {{ age }}<br>
+        {{ datestepsplot }}<br>
+    <h1>Past Events</h1>
+           <table class = "table">
+               <div id="rectangle" style="width:number px; height:number px; background-color:#f8f8f8; border-radius: 5px; margin-top : 15px;">
+               <th>Food</th>
+               <th>StepsWalked</th>
+               <th>Jog</th>
+               <th>slept</th>
+               <th>calories Burned</th>
+               <th>on</th>
+               <th>at</th>
+   </div>
+    {% for data in userData %}
+       <div id="rectangle" style="width:number px; height:number px; background-color:#f8f8f8; border-radius: 5px; margin-top : 15px;">
+
+           <tr>
+               <td>{{data[1]}}</td>
+               <td> {{data[0]}}</td>
+               <td> {{data[2]}}</td>
+               <td> {{data[3]}}</td>
+               <td> {{ data[7] }}</td>
+               <td> {{data[4]}}</td>
+               <td> {{ data[5] }}</td>
+           </tr>
+        </div>
+    {% endfor %}
+    <div id="rectangle" style="width:number px; height:number px; background-color:#f8f8f8; border-radius: 5px; margin-top : 15px;">
+    <tr style = "outline: thin solid black; margin-top : 25px;">
+    <td><b>Total</b></td>
+    <td> <b>{{ totalWalked }}</b></td>
+    <td> <b>{{ totalJog }}</b></td>
+    <td> <b>{{ totalSleep }}</b></td>
+    <td> <b>{{ totalCaloriesBurned }}</b></td>
+    </tr>
+    </div>
+    </table>
+
+</form>
+
+{% endblock %}

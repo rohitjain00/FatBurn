@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Burn-Fat
+{% endblock %}
+
+{% block main %}
+<div class="slideshow-container">
+  <h1>Follow theese 9 simple exercises to get your body in shape.</h1>
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 9</div>
+    <img src = "http://78.media.tumblr.com/33574e89c95d9f6dd3bee79e9a585efb/tumblr_mxdxb5n6ju1ro3593o4_r1_500.gif" style = "opacity: 1;">
+    <div class="text">“Today I will do what others won’t, so tomorrow I can accomplish what others can’t.” —Jerry Rice</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 9</div>
+    <img src="http://78.media.tumblr.com/5d053e6b10e809902ee30ebaa3c99d0c/tumblr_mxt51vS8L11ro3593o5_500.gif" style = "opacity: 1;">
+    <div class="text">“Do something today that your future self will thank you for.” —Unknown</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 9</div>
+    <img src="http://31.media.tumblr.com/54e1b6e82f79a57aba9b1f93b29010bf/tumblr_mxt51vS8L11ro3593o1_500.gif" style = "opacity: 1;">
+    <div class="text">“We are what we repeatedly do. Excellence then is not an act but a habit.” —Aristotle</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 9</div>
+    <img src="http://31.media.tumblr.com/64937d5915a5b8612e683f270329a746/tumblr_mxt51vS8L11ro3593o2_500.gif"  style = "opacity: 1;">
+    <div class="text">“No matter how slow you go, you are still lapping everybody on the couch.” —Unknown</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 9</div>
+    <img src="http://31.media.tumblr.com/f8eba9a5d36e426a3685ad5d2589ef2b/tumblr_mxt51vS8L11ro3593o3_500.gif" style = "opacity: 1;">
+    <div class="text">“Sweat is fat crying.”—Unknown</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 9</div>
+    <img src="http://38.media.tumblr.com/589082500266d471f4cc5dccf7119d46/tumblr_mxt51vS8L11ro3593o4_500.gif" style = "opacity: 1;">
+    <div class="text">“You miss 100% of the shots you don’t take.” –Wayne Gretzky</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">7 / 9</div>
+    <img src="http://38.media.tumblr.com/b262ec3050448236a9653e24244cc283/tumblr_mxt51vS8L11ro3593o8_500.gif" style = "opacity: 1;">
+    <div class="text">The difference between the impossible and the possible lies in a person’s determination.” —Tommy Lasorda</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">8 / 9</div>
+    <img src="http://33.media.tumblr.com/38d7aa43efba79d16547105946f60443/tumblr_mxt51vS8L11ro3593o6_500.gif" style = "opacity: 1;">
+    <div class="text"> “If you want something you’ve never had, you must be willing to do something you’ve never done.” —Thomas Jefferson</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">9 / 9</div>
+    <img src="http://38.media.tumblr.com/ad0d98d4c9e270d419b57b8075216038/tumblr_mxt51vS8L11ro3593o7_500.gif" style = "opacity: 1;">
+    <div class="text">“To give anything less than your best is to sacrifice the gift.” —Steve Prefontaine</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+{% endblock %}
