@@ -2,13 +2,14 @@ import sqlite3
 from flask import Flask, flash, redirect, render_template, request, session, url_for
 from flask_session import Session
 from passlib.apps import custom_app_context as pwd_context
-from tempfile import mkdtemp
-
+rom tempfile import mkdtemp
+from werkzeug.contrib.fixers import ProxyFix
 
 from helpers import *
 
 # configure application
 app = Flask(__name__)
+app.wsgi_app = ProxyFix(app.wsgi_app)
 
 # ensure responses aren't cached
 if app.config["DEBUG"]:
