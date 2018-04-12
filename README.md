@@ -6,6 +6,8 @@ We have created a web app to track our day to day life activities and helps us t
 Video Representation : https://vimeo.com/250457962
 <br>
 Presentation : https://he-s3.s3.amazonaws.com/media/sprint/bobs-build-a-thon/team/316576/d4e8f26photo_album__2_.pptx
+<br>
+Created for Hackathon (https://www.hackerearth.com/sprints/bobs-build-a-thon/)
 
 <img src = "https://he-s3.s3.amazonaws.com/media/sprint/bobs-build-a-thon/team/316576/798defchomepage.png" height = 450 width = 800)/>
 
