@@ -7,11 +7,9 @@ from werkzeug.contrib.fixers import ProxyFix
 
 from helpers import *
 
-# configure application
 app = Flask(__name__)
 app.wsgi_app = ProxyFix(app.wsgi_app)
 
-# ensure responses aren't cached
 if app.config["DEBUG"]:
     @app.after_request
     def after_request(response):
@@ -20,16 +18,13 @@ if app.config["DEBUG"]:
         response.headers["Pragma"] = "no-cache"
         return response
 
-# custom filter
 app.jinja_env.filters["usd"] = usd
 
-# configure session to use filesystem (instead of signed cookies)
 app.config["SESSION_FILE_DIR"] = mkdtemp()
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-# configure CS50 Library to use SQLite database
 db = sqlite3.connect("finance.db")
 
 @app.route("/")
@@ -85,9 +80,6 @@ def statistics():
         totalSleep += data[3]
         totalJog += data[2]
         totalCaloriesBurned += data[7]
-
-
-
 
     return render_template("statistics.html",bmi = round(bmi,2),bmiStatement = bmiStatement, userData = userData,
     totalWalked = totalWalked,BMR = round(BMR,2), totalSleep = totalSleep, totalJog = totalJog, currentweight = rows[0][3]
