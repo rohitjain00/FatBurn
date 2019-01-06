@@ -7,6 +7,7 @@ from functools import wraps
 
 def apology(message, code=400):
     """Renders message as an apology to user."""
+
     def escape(s):
         """
         Escape special characters.
@@ -17,6 +18,7 @@ def apology(message, code=400):
                          ("%", "~p"), ("#", "~h"), ("/", "~s"), ("\"", "''")]:
             s = s.replace(old, new)
         return s
+
     return render_template("apology.html", top=code, bottom=escape(message)), code
 
 
@@ -26,11 +28,13 @@ def login_required(f):
 
     http://flask.pocoo.org/docs/0.12/patterns/viewdecorators/
     """
+
     @wraps(f)
     def decorated_function(*args, **kwargs):
         if session.get("user_id") is None:
             return redirect("/login")
         return f(*args, **kwargs)
+
     return decorated_function
 
 
@@ -100,7 +104,7 @@ def lookup(symbol):
 
         # return stock's name (as a str), price (as a float), and (uppercased) symbol (as a str)
         return {
-            "name": symbol.upper(), # for backward compatibility with Yahoo
+            "name": symbol.upper(),  # for backward compatibility with Yahoo
             "price": price,
             "symbol": symbol.upper()
         }
