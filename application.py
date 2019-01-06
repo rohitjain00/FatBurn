@@ -5,7 +5,7 @@ from passlib.apps import custom_app_context as pwd_context
 from tempfile import mkdtemp
 from werkzeug.contrib.fixers import ProxyFix
 
-from helpers import *
+from helpers import apology, login_required
 
 app = Flask(__name__)
 app.wsgi_app = ProxyFix(app.wsgi_app)
