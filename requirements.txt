@@ -10,7 +10,7 @@ cffi==1.10.0
 chardet==3.0.4
 check50==2.2.1
 click==6.7
-cs50==2.3.3
+cs50==2.4.4
 cssselect==1.0.1
 decorator==4.1.2
 EditorConfig==0.12.2
