@@ -26,7 +26,7 @@ gunicorn==19.9.0
 help50==2.0.1
 html5lib==0.999999999
 icdiff==1.9.1
-idna==2.5
+idna==2.8
 ipython-genutils==0.2.0
 isort==4.2.15
 itsdangerous==0.24
