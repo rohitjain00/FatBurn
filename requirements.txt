@@ -1,5 +1,5 @@
 astroid==1.5.3
-autopep8==1.3.3
+autopep8==1.4.3
 backports.shutil-get-terminal-size==1.0.0
 backports.shutil-which==3.5.2
 beautifulsoup4==4.6.0
