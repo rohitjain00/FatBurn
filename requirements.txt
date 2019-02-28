@@ -66,7 +66,7 @@ six==1.12.0
 SQLAlchemy==1.2.18
 sqlparse==0.2.3
 style50==2.4.0
-submit50==2.4.6
+submit50==2.4.9
 termcolor==1.1.0
 tinycss==0.4
 tinycss2==0.5
