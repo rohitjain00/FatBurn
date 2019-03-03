@@ -15,7 +15,7 @@ cssselect==1.0.1
 decorator==4.1.2
 EditorConfig==0.12.2
 feedparser==5.2.1
-Flask==0.12.4
+Flask==1.0.2
 Flask-AutoIndex==0.6.2
 Flask-JSGlue==0.3.1
 Flask-Session==0.3.1
