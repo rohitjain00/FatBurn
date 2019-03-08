@@ -46,7 +46,7 @@ olefile==0.44
 passlib==1.7.1
 pexpect==4.2.1
 Pillow==5.4.1
-plotly==2.0.13
+plotly==2.7.0
 ptyprocess==0.5.2
 pycodestyle==2.3.1
 pycparser==2.19
