@@ -41,7 +41,7 @@ mccabe==0.6.1
 natsort==5.5.0
 nbformat==4.3.0
 nltk==3.2.4
-oauthlib==2.0.2
+oauthlib==3.0.1
 olefile==0.44
 passlib==1.7.1
 pexpect==4.2.1
