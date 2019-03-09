@@ -4,8 +4,8 @@ backports.shutil-get-terminal-size==1.0.0
 backports.shutil-which==3.5.2
 beautifulsoup4==4.6.0
 bs4==0.0.1
-cairocffi==0.9.0
-certifi==2018.11.29
+cairocffi==1.0.2
+certifi==2017.11.5
 cffi==1.12.2
 chardet==3.0.4
 check50==2.2.5
