@@ -1,4 +1,5 @@
 [![buddy pipeline](https://app.buddy.works/rohitjain00/fatburn/pipelines/pipeline/141212/badge.svg?token=12a288850ff10ce4a9786d411f40bd0933f81d9a662591f5b63c30e61f461cf1 "buddy pipeline")](https://app.buddy.works/rohitjain00/fatburn/pipelines/pipeline/141212)
+[![CodeFactor](https://www.codefactor.io/repository/github/rohitjain00/fatburn/badge)](https://www.codefactor.io/repository/github/rohitjain00/fatburn)
 # FatBurn
 Fitness based web application
 
