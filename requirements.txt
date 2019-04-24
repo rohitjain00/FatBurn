@@ -1,4 +1,4 @@
-check50==2.2.5
+check50==2.2.6
 cs50==3.1.0
 decorator==4.1.2
 Flask==0.12.4
