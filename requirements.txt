@@ -20,7 +20,7 @@ sqlparse==0.3.0
 style50==2.6.4
 submit50==2.4.11
 urllib3==1.25
-virtualenv==16.5.0
+virtualenv==16.6.0
 webencodings==0.5.1
 Werkzeug==0.15.4
 wrapt==1.10.11
