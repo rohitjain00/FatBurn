@@ -1,5 +1,5 @@
 check50==3.0.5
-cs50==4.0.0
+cs50==4.0.4
 decorator==4.4.0
 Flask==0.12.4
 Flask-AutoIndex==0.6.4
