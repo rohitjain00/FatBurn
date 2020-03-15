@@ -1,6 +1,6 @@
 check50==3.0.5
 cs50==4.0.0
-decorator==4.4.0
+decorator==4.4.2
 Flask==0.12.4
 Flask-AutoIndex==0.6.4
 Flask-JSGlue==0.3.1
