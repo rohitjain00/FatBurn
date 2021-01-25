@@ -24,3 +24,4 @@ virtualenv==16.7.5
 webencodings==0.5.1
 Werkzeug==0.15.6
 wrapt==1.11.2
+pylint>=2.5.0 # not directly required, pinned by Snyk to avoid a vulnerability
