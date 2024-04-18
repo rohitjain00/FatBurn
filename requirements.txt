@@ -7,7 +7,7 @@ Flask-JSGlue==0.3.1
 Flask-Session==0.3.1
 Flask-Silk==0.2
 Flask-SQLAlchemy==2.4.1
-gunicorn==19.9.0
+gunicorn==22.0.0
 help50==2.0.1
 Jinja2==2.10.3
 passlib==1.7.1
