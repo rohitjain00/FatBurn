@@ -24,3 +24,7 @@ virtualenv==16.7.5
 webencodings==0.5.1
 Werkzeug==0.15.6
 wrapt==1.11.2
+certifi>=2023.7.22 # not directly required, pinned by Snyk to avoid a vulnerability
+pygments>=2.15.0 # not directly required, pinned by Snyk to avoid a vulnerability
+pylint>=2.7.0 # not directly required, pinned by Snyk to avoid a vulnerability
+pypdf2>=2.10.6 # not directly required, pinned by Snyk to avoid a vulnerability
