@@ -4,7 +4,7 @@ decorator==4.4.0
 Flask==2.0.3
 Flask-AutoIndex==0.6.4
 Flask-JSGlue==0.3.1
-Flask-Session==0.4.0
+Flask-Session==0.8.0
 Flask-Silk==0.2
 Flask-SQLAlchemy==2.4.1
 gunicorn==19.9.0
