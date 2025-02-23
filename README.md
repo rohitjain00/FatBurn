@@ -20,12 +20,32 @@ Created for Hackathon (https://www.hackerearth.com/sprints/bobs-build-a-thon/)
 
 <img src = "https://he-s3.s3.amazonaws.com/media/sprint/bobs-build-a-thon/team/316576/b689074exercise.png" height = 450 width = 800)/>
 
-# Setup Development Enviornment
-1. This project is created using Python(Flask)
-2. Install all dependencies required ($ pip install -r requirements.txt )
-3. To run the application you can either use the flask command or python’s -m switch with Flask. Before you can do that you need to tell your terminal the application to work with by exporting the FLASK_APP environment variable
-$ export FLASK_APP=application.py
-$ flask run
-  * Running on 127.0.0.*:\****
-4. Go to the 127.0.0.*:\**** to see your application running
+
+# Setup Development Environment
+1. This project is created using Python (Flask)
+2. Create a virtual environment:
+  ```sh
+  $ python3 -m venv venv
+  ```
+3. Activate the virtual environment:
+  - On Windows:
+    ```sh
+    $ venv\Scripts\activate
+    ```
+  - On macOS and Linux:
+    ```sh
+    $ source venv/bin/activate
+    ```
+4. Install all dependencies required:
+  ```sh
+  $ pip install -r requirements.txt
+  ```
+5. To run the application, you can either use the `flask` command or Python’s `-m` switch with Flask. Before you can do that, you need to tell your terminal the application to work with by exporting the `FLASK_APP` environment variable:
+  ```sh
+  $ export FLASK_APP=application.py
+  $ flask run
+  ```
+  * Running on `127.0.0.*:\****`
+6. Go to `127.0.0.*:\****` to see your application running.
+
 
