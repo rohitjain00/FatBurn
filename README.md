@@ -20,9 +20,10 @@ Created for Hackathon (https://www.hackerearth.com/sprints/bobs-build-a-thon/)
 
 <img src = "https://he-s3.s3.amazonaws.com/media/sprint/bobs-build-a-thon/team/316576/b689074exercise.png" height = 450 width = 800)/>
 
-
 # Setup Development Environment
+
 1. This project is created using Python (Flask)
+
 2. Create a virtual environment:
   ```sh
   $ python3 -m venv venv
@@ -46,6 +47,22 @@ Created for Hackathon (https://www.hackerearth.com/sprints/bobs-build-a-thon/)
   $ flask run
   ```
   * Running on `127.0.0.*:\****`
-6. Go to `127.0.0.*:\****` to see your application running.
+6. If running the application for the first time, create the schema by running:
+  ```sh
+  $ python create_schema.py
+  ```
+7. Go to `127.0.0.*:\****` to see your application running.
 
+# Running with Docker
 
+1. Build the Docker image:
+  ```sh
+  $ docker-compose build
+  ```
+
+2. Run the Docker container:
+  ```sh
+  $ docker-compose up
+  ```
+
+3. Go to `http://localhost:5000` to see your application running.

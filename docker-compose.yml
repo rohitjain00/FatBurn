@@ -1,0 +1,16 @@
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+      - sqlite_db:/app/sqlite_db
+    environment:
+      FLASK_APP: application.py
+      FLASK_RUN_HOST: 0.0.0.0
+    command: >
+      sh -c "python create_schema.py && flask run --no-reload --with-threads"
+
+volumes:
+  sqlite_db:
