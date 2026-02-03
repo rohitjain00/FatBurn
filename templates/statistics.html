@@ -6,49 +6,52 @@
 
 {% block main %}
 
-<div id="rectangle" style="width:number px; height:number px; background-color:#f8f8f8; border-radius: 5px; ">
+<div class="container" style="background-color:#f8f8f8; border-radius: 5px; padding: 20px;">
     <h1>Statistics</h1>
         Your BMI is {{bmi}} {{ bmiStatement }}<br>
         Your BMR is {{BMR}} <br>
         Current Weight : {{ currentweight }} Must Have Weight : {{idealWeight}}
         <br>Age : {{ age }}<br>
-        {{ datestepsplot }}<br>
+        <br>
     <h1>Past Events</h1>
-           <table class = "table">
-               <div id="rectangle" style="width:number px; height:number px; background-color:#f8f8f8; border-radius: 5px; margin-top : 15px;">
-               <th>Food</th>
-               <th>StepsWalked</th>
-               <th>Jog</th>
-               <th>slept</th>
-               <th>calories Burned</th>
-               <th>on</th>
-               <th>at</th>
-   </div>
-    {% for data in userData %}
-       <div id="rectangle" style="width:number px; height:number px; background-color:#f8f8f8; border-radius: 5px; margin-top : 15px;">
+           <table class = "table table-striped">
+               <thead>
+                   <tr>
+                       <th>Food</th>
+                       <th>Steps Walked</th>
+                       <th>Jog (km)</th>
+                       <th>Sleep (hrs)</th>
+                       <th>Calories Burned</th>
+                       <th>Date</th>
+                       <th>Time</th>
+                   </tr>
+               </thead>
+               <tbody>
+                {% for data in userData %}
+                   <tr>
+                       <td>{{ data.food }}</td>
+                       <td>{{ data.steps }}</td>
+                       <td>{{ data.jog }}</td>
+                       <td>{{ data.sleep }}</td>
+                       <td>{{ data.calories }}</td>
+                       <td>{{ data.created_at.strftime('%Y-%m-%d') if data.created_at else '' }}</td>
+                       <td>{{ data.created_at.strftime('%H:%M') if data.created_at else '' }}</td>
+                   </tr>
+                {% endfor %}
+               </tbody>
+               <tfoot>
+                   <tr style="font-weight: bold; border-top: 2px solid #ddd;">
+                       <td>Total</td>
+                       <td>{{ totalWalked }}</td>
+                       <td>{{ totalJog }}</td>
+                       <td>{{ totalSleep }}</td>
+                       <td>{{ totalCaloriesBurned }}</td>
+                       <td></td>
+                       <td></td>
+                   </tr>
+               </tfoot>
+           </table>
 
-           <tr>
-               <td>{{data[1]}}</td>
-               <td> {{data[0]}}</td>
-               <td> {{data[2]}}</td>
-               <td> {{data[3]}}</td>
-               <td> {{ data[7] }}</td>
-               <td> {{data[4]}}</td>
-               <td> {{ data[5] }}</td>
-           </tr>
-        </div>
-    {% endfor %}
-    <div id="rectangle" style="width:number px; height:number px; background-color:#f8f8f8; border-radius: 5px; margin-top : 15px;">
-    <tr style = "outline: thin solid black; margin-top : 25px;">
-    <td><b>Total</b></td>
-    <td> <b>{{ totalWalked }}</b></td>
-    <td> <b>{{ totalJog }}</b></td>
-    <td> <b>{{ totalSleep }}</b></td>
-    <td> <b>{{ totalCaloriesBurned }}</b></td>
-    </tr>
-    </div>
-    </table>
-
-</form>
+</div>
 
 {% endblock %}
