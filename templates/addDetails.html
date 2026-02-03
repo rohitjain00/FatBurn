@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block main %}
-<form action="{{ url_for('addDetails') }}" method="post">
+<form action="{{ url_for('main.addDetails') }}" method="post">
 
     <div class="form-group">
         <input autocomplete="off" autofocus class="form-control" name="steps" placeholder="no. of steps walked" type="text"/>

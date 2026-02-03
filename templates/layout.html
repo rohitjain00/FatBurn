@@ -133,25 +133,25 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="{{ url_for('index') }}"><span class="blue">B</span><span class="red">U</span><span class="yellow">R</span><span class="green">N</span> : <span class="red">Fat</span></a>
+                        <a class="navbar-brand" href="{{ url_for('main.index') }}"><span class="blue">B</span><span class="red">U</span><span class="yellow">R</span><span class="green">N</span> : <span class="red">Fat</span></a>
                     </div>
                     <div class="collapse navbar-collapse" id="navbar">
                         {% if session.user_id %}
                             <ul class="nav navbar-nav">
-                                <li><a href="{{ url_for('statistics') }}">Statistics</a></li>
-                                <li><a href="{{ url_for('exercises') }}">Exercises</a></li>
-                                <li><a href="{{ url_for('diet_plans') }}">Diet Plans</a></li>
-                                <li><a href="{{ url_for('gym_nearby') }}">Gym Nearby</a></li>
-                                <li><a href="{{ url_for('yoga') }}">Yoga</a></li>
+                                <li><a href="{{ url_for('main.statistics') }}">Statistics</a></li>
+                                <li><a href="{{ url_for('main.exercises') }}">Exercises</a></li>
+                                <li><a href="{{ url_for('main.diet_plans') }}">Diet Plans</a></li>
+                                <li><a href="{{ url_for('main.gym_nearby') }}">Gym Nearby</a></li>
+                                <li><a href="{{ url_for('main.yoga') }}">Yoga</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                                <li><a href="{{ url_for('addDetails') }}">Add Data</a></li>
+                                <li><a href="{{ url_for('auth.logout') }}">Log Out</a></li>
+                                <li><a href="{{ url_for('main.addDetails') }}">Add Data</a></li>
                             </ul>
                         {% else %}
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="{{ url_for('register') }}">Register</a></li>
-                                <li><a href="{{ url_for('login') }}">Log In</a></li>
+                                <li><a href="{{ url_for('auth.register') }}">Register</a></li>
+                                <li><a href="{{ url_for('auth.login') }}">Log In</a></li>
 
                             </ul>
                         {% endif %}
