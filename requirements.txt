@@ -4,5 +4,5 @@ Flask-SQLAlchemy
 itsdangerous>=3.0.6
 Jinja2==3.1.6
 MarkupSafe==3.0.3
-Werkzeug==3.1.8
+Werkzeug==3.1.9
 pytest
